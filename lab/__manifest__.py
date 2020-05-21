@@ -24,9 +24,9 @@
 
     # always loaded
     'data': [
-        'security/ir.model.access.csv',
+        # 'security/ir.model.access.csv',
         # 'views/views.xml',
-        'security/lab_security.xml',
+        # 'security/lab_security.xml',
         'views/lab_reports.xml',
         'views/tempates.xml',
         'views/lab_cases_between_Dates_wiz.xml',

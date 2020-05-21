@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+
+
+        <record id="lab_cases_registration_tree" model="ir.ui.view">
+            <field name="Cases in Registration"></field>
+            <field name="model">lab.cases</field>
+            <field name="arch" type="xml">
+                <tree string="Cases in Registration">
+                     <field name="seq_case_no" readonly="1"/>
+                    <field name="patient"/>
+                    <field name="shade"/>
+                    <field name="entry_date"/>
+                    <field name="delivery_date"/>
+                    <field name="doctor"/>
+                    <field name="price"/>
+                    <field name="discount"/>
+                    <field name="billed_price" readonly="1"/>
+                    <field name="estimated_cost"/>
+                    <field name="estimated_profit" readonly="1"/>
+
+                </tree>
+            </field>
+        </record>
+
+        <record id="lab_cases_bropha_tree" model="ir.ui.view">
+            <field name="Cases in Bropha"></field>
+            <field name="model">lab.cases</field>
+            <field name="arch" type="xml">
+                <tree string="Cases in Bropha">
+                     <field name="seq_case_no" readonly="1"/>
+                    <field name="patient"/>
+                    <field name="shade"/>
+                    <field name="entry_date"/>
+                    <field name="delivery_date"/>
+                    <field name="doctor"/>
+                    <field name="price"/>
+                    <field name="discount"/>
+                    <field name="billed_price" readonly="1"/>
+                    <field name="estimated_cost"/>
+                    <field name="estimated_profit" readonly="1"/>
+
+                </tree>
+            </field>
+        </record>
+
+
+
+        <record id="lab_cases_manufacturing_tree" model="ir.ui.view">
+            <field name="Cases in Manufacturing"></field>
+            <field name="model">lab.cases</field>
+            <field name="arch" type="xml">
+                <tree string="Cases in Manufacturing">
+                     <field name="seq_case_no" readonly="1"/>
+                    <field name="patient"/>
+                    <field name="shade"/>
+                    <field name="entry_date"/>
+                    <field name="delivery_date"/>
+                    <field name="doctor"/>
+                    <field name="price"/>
+                    <field name="discount"/>
+                    <field name="billed_price" readonly="1"/>
+                    <field name="estimated_cost"/>
+                    <field name="estimated_profit" readonly="1"/>
+
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="lab_cases_delivering_tree" model="ir.ui.view">
+            <field name="Cases in Delivering"></field>
+            <field name="model">lab.cases</field>
+            <field name="arch" type="xml">
+                <tree string="Cases in Delivering">
+                     <field name="seq_case_no" readonly="1"/>
+                    <field name="patient"/>
+                    <field name="shade"/>
+                    <field name="entry_date"/>
+                    <field name="delivery_date"/>
+                    <field name="doctor"/>
+                    <field name="price"/>
+                    <field name="discount"/>
+                    <field name="billed_price" readonly="1"/>
+                    <field name="estimated_cost"/>
+                    <field name="estimated_profit" readonly="1"/>
+
+                </tree>
+            </field>
+        </record>
+
+        <record id="lab_cases_completed_tree" model="ir.ui.view">
+            <field name="Cases processes Completed"></field>
+            <field name="model">lab.cases</field>
+            <field name="arch" type="xml">
+                <tree string="Cases processes Completed">
+                     <field name="seq_case_no" readonly="1"/>
+                    <field name="patient"/>
+                    <field name="shade"/>
+                    <field name="entry_date"/>
+                    <field name="delivery_date"/>
+                    <field name="doctor"/>
+                    <field name="price"/>
+                    <field name="discount"/>
+                    <field name="billed_price" readonly="1"/>
+                    <field name="estimated_cost"/>
+                    <field name="estimated_profit" readonly="1"/>
+
+                </tree>
+            </field>
+        </record>
+
+
+    <record id="action_lab_cases_registration" model="ir.actions.act_window">
+        <field name="name">Cases in Registration</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">lab.cases</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="lab_cases_registration_tree"/>
+<!--        <field name="context">{'search_default_group_Received_books': 1}</field>-->
+        <field name="domain">[('state','=','registration')]</field>
+
+
+    </record>
+
+
+    <record id="action_lab_cases_registration" model="ir.actions.act_window">
+        <field name="name">Cases in Registration</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">lab.cases</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="lab_cases_registration_tree"/>
+<!--        <field name="context">{'search_default_group_Received_books': 1}</field>-->
+        <field name="domain">[('state','=','registration')]</field>
+
+
+    </record>
+
+    <record id="action_lab_cases_bropha" model="ir.actions.act_window">
+        <field name="name">Cases in Bropha</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">lab.cases</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="lab_cases_bropha_tree"/>
+<!--        <field name="context">{'search_default_group_Received_books': 1}</field>-->
+        <field name="domain">[('state','=','bropha')]</field>
+
+
+    </record>
+
+    <record id="action_lab_cases_manufacturing" model="ir.actions.act_window">
+        <field name="name">Cases in Manufacturing</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">lab.cases</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="lab_cases_manufacturing_tree"/>
+<!--        <field name="context">{'search_default_group_Received_books': 1}</field>-->
+        <field name="domain">[('state','=','manufacturing')]</field>
+
+
+    </record>
+
+    <record id="action_lab_cases_delivering" model="ir.actions.act_window">
+        <field name="name">Cases in Delivering</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">lab.cases</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="lab_cases_delivering_tree"/>
+<!--        <field name="context">{'search_default_group_Received_books': 1}</field>-->
+        <field name="domain">[('state','=','delivering')]</field>
+
+
+    </record>
+
+    <record id="action_lab_cases_completed" model="ir.actions.act_window">
+        <field name="name">Cases in processes Completed</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">lab.cases</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="lab_cases_completed_tree"/>
+<!--        <field name="context">{'search_default_group_Received_books': 1}</field>-->
+        <field name="domain">[('state','=','completed')]</field>
+
+
+    </record>
+
+
+
+</odoo>

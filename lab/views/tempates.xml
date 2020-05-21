@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+
+    <data>
+
+     <template id="report_doctor_card">
+        <t t-call="web.html_container">
+            <t t-call="web.internal_layout">
+            <t t-foreach="docs" t-as="o">
+    <!--        <t t-call="report.internal_layout">-->
+
+                    <div class="page">
+                        <h1>Doctor Card</h1>
+                        <h4>Dr / <span t-field = "o.name"/></h4>
+
+                         <table class="table table-condensed" style="width:40%" align="center">
+                                 <tr class="h1-title-big">
+                                     <th>Data</th>
+                                     <th>Value</th>
+                                 </tr>
+                                 <tr>
+                                     <th>Doctor</th>
+                                     <td><span t-field="o.name"></span></td>
+                                 </tr>
+                                 <tr>
+                                     <th>Age</th>
+                                     <td><span t-field="o.age_now"></span></td>
+                                 </tr>
+
+                                 <tr>
+                                     <th>Address</th>
+                                     <td><span t-field="o.address"></span></td>
+                                 </tr>
+
+                                 <tr>
+                                     <th>Governorate</th>
+                                     <td><span t-field="o.governorate"></span></td>
+                                 </tr>
+
+                                 <tr>
+                                     <th>City</th>
+                                     <td><span t-field="o.city"></span></td>
+                                 </tr>
+                                 <tr>
+                                     <th>Gender</th>
+                                     <td><span t-field="o.gender"></span></td>
+                                 </tr>
+                                 <tr>
+                                     <th>Landline</th>
+                                     <td><span t-field="o.landline"></span></td>
+                                 </tr>
+                                 <tr>
+                                     <th>Mobile 1</th>
+                                     <td><span t-field="o.mobile_1"></span></td>
+                                 </tr>
+                                 <tr>
+                                     <th>Mobile 2</th>
+                                     <td><span t-field="o.mobile_2"></span></td>
+
+                                 </tr>
+                                 <tr>
+                                     <th>E-Mail</th>
+                                     <td><span t-field="o.email"></span></td>
+                                 </tr>
+
+
+
+                            </table>
+
+
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+
+        <template id="report_case_card">
+        <t t-call="web.html_container">
+            <t t-call="web.internal_layout">
+            <t t-foreach="docs" t-as="o">
+    <!--        <t t-call="report.internal_layout">-->
+
+                    <div class="page">
+                        <h1 class="text-center">Case Card</h1>
+
+                         <table class="table table-condensed" style="width:40%" align="center">
+                                 <tr class="h1-title-big">
+                                     <th>Data</th>
+                                     <th>Value</th>
+                                 </tr>
+                             <tr>
+                                     <th>Case ID</th>
+                                     <td><span t-field="o.seq_case_no"></span></td>
+                                 </tr>
+                             <tr>
+                                     <th>Patient</th>
+                                     <td><span t-field="o.patient"></span></td>
+                                 </tr>
+
+                                 <tr>
+                                     <th>Doctor</th>
+                                     <td><span t-field="o.doctor"></span></td>
+                                 </tr>
+                                 <tr>
+                                     <th>Shade</th>
+                                     <td><span t-field="o.shade"></span></td>
+                                 </tr>
+
+                                 <tr>
+                                     <th>Entry Date</th>
+                                     <td><span t-field="o.entry_date"></span></td>
+                                 </tr>
+
+                                 <tr>
+                                     <th>Delivery Date</th>
+                                     <td><span t-field="o.delivery_date"></span></td>
+                                 </tr>
+
+                                 <tr>
+                                     <th>Status</th>
+                                     <td><span t-field="o.state"></span></td>
+                                 </tr>
+                                 <tr>
+                                     <th>Total Price</th>
+                                     <td><span t-field="o.price"></span></td>
+                                 </tr>
+                                 <tr>
+                                     <th>Discount</th>
+                                     <td><span t-field="o.discount"></span></td>
+                                 </tr>
+                                 <tr>
+                                     <th>Billed Price</th>
+                                     <td><span t-field="o.billed_price"></span></td>
+                                 </tr>
+                                 <tr>
+                                     <th>Estimated Cost</th>
+                                     <td><span t-field="o.estimated_cost"></span></td>
+                                 </tr>
+
+                                 <tr>
+                                     <th>Estimated Profit</th>
+                                     <td><span t-field="o.estimated_profit"></span></td>
+
+                                 </tr>
+                                 <tr>
+                                     <th>User</th>
+                                     <td><span t-field="o.userid"></span></td>
+                                 </tr>
+
+
+
+                            </table>
+
+
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+<!--        <record model="report.paperformat" id="paperformat_cases_periodically_report">-->
+<!--        <field name="name">paperformat.ases_periodically_report</field>-->
+<!--        <field name="default" eval="True"/>-->
+<!--        <field name="format">A4</field>-->
+<!--        <field name="page_width">0</field>-->
+<!--        <field name="page_width">0</field>-->
+<!--        <field name="orientation">Portrait</field>-->
+<!--        <field name="margin_top">30</field>-->
+<!--        <field name="margin_right">5</field>-->
+<!--        <field name="margin_bottom">10</field>-->
+<!--        <field name="margin_left">5</field>-->
+<!--        <field name="header_line" eval="False"/>-->
+<!--        <field name="header_spacing">20</field>-->
+<!--        <field name="dpi">90</field>-->
+<!--        </record>-->
+
+
+
+            <template id="cases_periodically_report_view">
+                    <div class="header" style="border-bottom: 2px solid black">
+                <h3 class="text-center">Cases Periodically Report</h3>
+                <h4 class="text-center">
+                    <strong>From</strong>:
+                    <t t-esc="date_start"/>
+                    <strong>To</strong>:
+                    <t t-esc="date_end"/>
+                </h4>
+                    </div>
+
+
+                <div class="article">
+            <table class="table table-condensed table-bordered" style="width: 100%">
+                <thead>
+                    <th class="text-center" style="width: 70%">Employee</th>
+                    <th class="text-center" style="width: 15%">Presence</th>
+                    <th class="text-center" style="width: 15%">Absence</th>
+                </thead>
+                <tbody>
+                    <t t-foreach="docs" t-as="doc">
+                        <tr>
+                            <td>
+                                <span t-esc="doc['seq_case_no']"/>
+                            </td>
+                            <td class="text-center">
+                                <span t-esc="doc['entry_date']"/>
+                            </td>
+                            <td class="text-center">
+                                <span t-esc="doc['delivery_date']"/>
+                            </td>
+                        </tr>
+                    </t>
+                </tbody>
+            </table>
+        </div>
+
+
+            </template>
+
+
+
+
+
+    </data>
+
+</odoo>

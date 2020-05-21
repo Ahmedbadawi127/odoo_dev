@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+
+     <record model="ir.ui.view" id="report_lab_Cases_dates_wizard_form">
+        <field name="name">Cases Report</field>
+        <field name="model">report.lab.cases.report__cases_dates_wizard</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Cases between 2 Dates Report">
+                <group>
+                    <group>
+                        <field name="date_start"/>
+                    </group>
+                    <group>
+                        <field name="date_end"/>
+                    </group>
+                </group>
+                <footer>
+                    <button name="get_report" string="Get Report" type="object" class="oe_highlight"/>
+                    <button string="Cancel" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+
+
+          <act_window id="action_report_lab_Cases_dates_wizard"
+                name="Cases Report"
+                res_model="report.lab.cases.report__cases_dates_wizard"
+                view_mode="form"
+                target="new"/>
+
+</odoo>

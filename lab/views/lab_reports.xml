@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+
+    <data>
+        <!-- QWeb Reports -->
+        <!-- NAME & FILE_NAME should be the same -->
+                <report
+                    id="custom_report_doctor_card"
+                    model="lab.doctors"
+                    report_type="qweb-html"
+                    string="Doctor Card"
+                    name="lab.report_doctor_card"
+                    file="lab.report_doctor_card"
+                />
+
+                  <report
+                    id="custom_report_case_card"
+                    model="lab.cases"
+                    report_type="qweb-html"
+                    string="Case Card"
+                    name="lab.report_case_card"
+                    file="lab.report_case_card"
+                />
+
+                    <report id="cases_periodically_report"
+                    model="report.lab.cases.report__cases_dates_wizard"
+                    string="Cases Periodically Report"
+                    report_type="qweb-html"
+                    name="cj_custom_report.cases_periodically_report_view"
+                    menu="False"
+                    />
+    </data>
+
+</odoo>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<odoo>
+
+    <!-- This Menu Item will appear in the Upper bar, That's why It needs NO parent or action -->
+    <menuitem id="lab_root" name="Dental Lab" sequence="0"/>
+
+
+    <menuitem id="lab_operations" name="Operations Screen" parent="lab_root" sequence="0"/>
+
+            <menuitem id="lab_operations_cases_screen" name="Cases Screen" parent="lab_operations" sequence="0"/>
+
+                <menuitem id="lab_operations_cases" name="All Cases" parent="lab_operations_cases_screen" action="action_operations_cases" sequence="0"/>
+                <menuitem id="lab_operations_cases_registration" name="Cases in Registration" parent="lab_operations_cases_screen" action="action_lab_cases_registration" sequence="0"/>
+                <menuitem id="lab_operations_cases_bropha" name="Cases in Bropha" parent="lab_operations_cases_screen" action="action_lab_cases_bropha" sequence="1"/>
+                <menuitem id="lab_operations_cases_manufacturing" name="Cases in Manufacturing" parent="lab_operations_cases_screen" action="action_lab_cases_manufacturing" sequence="2"/>
+                <menuitem id="lab_operations_cases_delivering" name="Cases in Delivering" parent="lab_operations_cases_screen" action="action_lab_cases_delivering" sequence="3"/>
+                <menuitem id="lab_operations_cases_completed" name="Cases processes Completed" parent="lab_operations_cases_screen" action="action_lab_cases_completed" sequence="4"/>
+
+
+
+    <menuitem id="lab_agencies" name="Agencies" parent="lab_root" sequence="1"/>
+
+            <menuitem id="lab_agencies_doctors" name="Doctors" parent="lab_agencies" action="action_agencies_doctors" sequence="0"/>
+
+          <menuitem id="lab_settings" name="Configuration" parent="lab_root" sequence="2"/>
+
+            <menuitem id="lab_cases_settings" name="Cases Settings" parent="lab_settings" action="action_lab_settings" sequence="0"/>
+            <menuitem id="lab_cases_materials_settings" name="Materials Settings" parent="lab_settings" action="action_lab_materials" sequence="1"/>
+
+<!--    <menuitem id="lab_diagnosis" name="Diagnosis" parent="lab_root" action="action_lab_diagnosis" sequence="3"/>-->
+
+
+    <menuitem name="Reports" id="lab_Cases_reports_wiz" parent="lab_root" sequence="3"/>
+
+        <menuitem action="action_report_lab_Cases_dates_wizard" name="Cases Periodically" id="lab_Cases_report_wizard" parent="lab_Cases_reports_wiz" sequence="0"/>
+
+</odoo>

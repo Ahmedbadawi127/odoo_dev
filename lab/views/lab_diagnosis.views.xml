@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="action_lab_diagnosis" model="ir.actions.act_window">
+        <field name="name">Diagnosis</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">lab.diagnosis</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+<!--    <record id="materials_form_view" model="ir.ui.view">-->
+<!--        <field name="name">lab.materials.form</field>-->
+<!--        <field name="model">material_selection</field>-->
+<!--        <field name="arch" type="xml">-->
+<!--            <form string="Materials">-->
+
+<!--                <sheet>-->
+<!--                    <group col="4" colspan="8">-->
+<!--                        <field name="name"/>-->
+<!--                        <field name="price"/>-->
+<!--                    </group>-->
+
+<!--                </sheet>-->
+<!--            </form>-->
+<!--        </field>-->
+<!--    </record>-->
+
+    <record id="diagnosis_tree_view" model="ir.ui.view">
+        <field name="name">lab.diagnosis.tree</field>
+        <field name="model">lab.diagnosis</field>
+        <field name="arch" type="xml">
+            <tree string="Diagnosis">
+                <field name="type"/>
+                <field name="side"/>
+                <field name="t_1"/>
+                <field name="t_2"/>
+                <field name="t_3"/>
+                <field name="t_4"/>
+                <field name="t_5"/>
+                <field name="t_6"/>
+                <field name="t_7"/>
+                <field name="t_8"/>
+
+
+
+
+            </tree>
+        </field>
+    </record>
+
+</odoo>

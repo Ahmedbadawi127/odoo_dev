@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="group_secretary" model="res.groups">
+        <field name="name">Secretary</field>
+        <field name="category_id" ref="base.module_category_human_resources"/>
+    </record>
+
+    <record id="cases_hide_completed" model="ir.rule">
+        <field name="name">Hide Completed Cases</field>
+        <field ref="model_lab_cases" name="model_id"/>
+        <field name="domain_force">[('state', '!=', 'completed')]</field>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+        <!-- You can attach this rule to a specific group, Or make it Global -->
+        <field name="groups" eval="[(4, ref('group_secretary'))]"/>
+        <!--<field name="global" eval="1"/> -->
+    </record>
+</odoo>

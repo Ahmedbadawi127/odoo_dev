@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_lab_cases,access.lab.cases,model_lab_cases,group_secretary,1,1,1,0
+access_lab_doctors,access.lab.doctors,model_lab_doctors,group_secretary,1,1,1,0
+access_lab_diagnosis,access.lab.diagnosis,model_lab_diagnosis,group_secretary,1,1,1,0
+access_res_config_settings,res.config.settings,model_res_config_settings,group_secretary,1,1,1,0

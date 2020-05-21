@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="action_lab_materials" model="ir.actions.act_window">
+        <field name="name">Materials</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">material_selection</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="materials_form_view" model="ir.ui.view">
+        <field name="name">lab.materials.form</field>
+        <field name="model">material_selection</field>
+        <field name="arch" type="xml">
+            <form string="Materials">
+
+                <sheet>
+                    <group col="4" colspan="8">
+                        <field name="name"/>
+                        <field name="price"/>
+                    </group>
+
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="materials_tree_view" model="ir.ui.view">
+        <field name="name">lab.materials.tree</field>
+        <field name="model">material_selection</field>
+        <field name="arch" type="xml">
+            <tree string="Materials">
+                <field name="name"/>
+                <field name="price"/>
+            </tree>
+        </field>
+    </record>
+
+</odoo>

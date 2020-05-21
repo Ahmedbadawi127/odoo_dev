@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="doctors_form_view" model="ir.ui.view">
+        <field name="name">lab.doctors.form</field>
+        <field name="model">lab.doctors</field>
+        <field name="arch" type="xml">
+            <form string="Doctors">
+                <header>
+                    <button name="count" type="object" string="Test"/>
+                </header>
+                <sheet>
+                    <group col="4" colspan="8">
+                        <field name="name"/>
+                        <field name="age" placeholder="30"/>
+                        <field name="address"/>
+                        <field name="gender"/>
+                        <field name="landline" placeholder="0237803772"/>
+                        <field name="mobile_1" placeholder="01008253091"/>
+                        <field name="mobile_2" placeholder="01008253091"/>
+                        <field name="email" placeholder="mail@lab.com"/>
+                        <field name="governorate"/>
+                        <field name="city"/>
+                    </group>
+<!--                    <group col="4" colspan="8">-->
+<!--                            <field name="count_cases"/>-->
+<!--                            <field name="total_billing" readonly="1"/>-->
+<!--                            <field name="total_received" readonly="1" invisible="1"/>-->
+<!--                            <field name="total_remaining" readonly="1" invisible="1"/>-->
+<!--                    </group>-->
+<!--                    <notebook>-->
+<!--                         <page string="Cases">-->
+<!--                                <field name="cases_ids">-->
+<!--                                    <tree>-->
+
+<!--                                        <field name="seq_case_no" readonly="1"/>-->
+<!--                                        <field name="patient"/>-->
+<!--                                        <field name="Shade"/>-->
+<!--                                        <field name="entry_date"/>-->
+<!--                                        <field name="delivery_date"/>-->
+<!--                                        <field name="doctor"/>-->
+<!--                                        <field name="state"/>-->
+<!--                                        <field name="price"/>-->
+<!--                                        <field name="discount"/>-->
+<!--                                        <field name="billed_price" readonly="1"/>-->
+<!--                                        <field name="estimated_cost"/>-->
+<!--                                        <field name="estimated_profit" readonly="1"/>-->
+<!--                                        <field name="userid"/>-->
+
+
+<!--                                    </tree>-->
+<!--                                </field>-->
+<!--                         </page>-->
+<!--                    </notebook>-->
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="doctors_tree_view" model="ir.ui.view">
+        <field name="name">lab.doctors.tree</field>
+        <field name="model">lab.doctors</field>
+        <field name="arch" type="xml">
+            <tree string="Doctors">
+                <field name="seq_doc_no" readonly="1"/>
+                <field name="name"/>
+<!--                <field name="count_cases"/>-->
+<!--                <field name="age"/>-->
+                <field name="age_now"/>
+                <field name="address"/>
+                <field name="gender"/>
+                <field name="landline"/>
+                <field name="mobile_1"/>
+                <field name="mobile_2"/>
+                <field name="email"/>
+                <field name="governorate"/>
+                <field name="city"/>
+<!--                <field name="count_cases"/>-->
+                <field name="total_billing" invisible="1"/>
+                <field name="total_received" invisible="1"/>
+                <field name="total_remaining" invisible="1"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_agencies_doctors" model="ir.actions.act_window">
+        <field name="name">Doctors</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">lab.doctors</field>
+        <field name="view_mode">tree,form</field>
+         <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('doctors_tree_view')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('doctors_form_view')})]"/>
+    </record>
+
+</odoo>
